@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+        }
+        .box{
+            width: 380px;
+            /* height: 350px; */
+            border: 1px solid black;
+            border-radius: 20px;
+            padding-bottom: 20px;
+            margin: 10px;
+            /* Enable transition + delay */
+            /* transition: background-color 1s ease-in-out 1s; */
+             
+            
+        }
+        .box:hover, .second-button:hover{
+            background-color: #ED0331;
+            color: white;
+            
+        }
+        .box>img{
+            width: 25%;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+             /* border: 1px solid black; */
+            border-radius: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .box>div{
+            margin-left: 20px;
+        }
+        .box>div> h1{
+            color: rgb(105, 104, 104);
+            font-size: 16px;
+            font-family: "Poppins";
+        }
+        .box>div> h3{
+            font-size: 22px;
+            font-family: "Poppins";
+        }
+        .pipe{
+            color: red;
+            font-size: 18px;
+            font-weight: bolder;
+
+        }
+        .date{
+            font-weight: bolder;
+        }
+        .box>div>p{
+             font-family: "Poppins";
+        }
+        .first-button{
+            background-color: #ED0331;
+            width: 35%;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-family: "Poppins";
+        }
+        .second-button{
+            background-color: white;
+             width: 35%;
+            height: 30px;
+            border-radius: 10px;
+             border: 1px solid #ED0331;
+             color: #ED0331;
+        }
+        .first-button:hover{
+            background-color: white;
+            color: #ED0331;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box">
+          <img src="https://cdn.masaischool.com/masai-website/iim-sirmur-logo.png" alt="logo">
+
+          <div>
+            <h1>IIM Sirmaur</h1>
+          <h3>EDGE, Essentails of Data <br> Analytics, Gen AI & Execution</h3>
+          <p>06 months <span class="pipe"> | </span> online</p>
+          <p>Qualifier Test - <span class="date">12th Nov 2025</span> </p>
+          <button class="first-button">Learn More → </button>
+          <button class="second-button">Brochure → </button>
+          </div>
+    </div>
+    <div class="box">
+          <img src="https://cdn.masaischool.com/masai-website/iim-sirmur-logo.png" alt="logo">
+
+          <div>
+            <h1>IIM Sirmaur</h1>
+          <h3>EDGE, Essentails of Data <br> Analytics, Gen AI & Execution</h3>
+          <p>06 months <span class="pipe"> | </span> online</p>
+          <p>Qualifier Test - <span class="date">12th Nov 2025</span> </p>
+          <button class="first-button">Learn More → </button>
+          <button class="second-button">Brochure → </button>
+          </div>
+    </div>
+    <div class="box">
+          <img src="https://cdn.masaischool.com/masai-website/iim-sirmur-logo.png" alt="logo">
+
+          <div>
+            <h1>IIM Sirmaur</h1>
+          <h3>EDGE, Essentails of Data <br> Analytics, Gen AI & Execution</h3>
+          <p>06 months <span class="pipe"> | </span> online</p>
+          <p>Qualifier Test - <span class="date">12th Nov 2025</span> </p>
+          <button class="first-button">Learn More → </button>
+          <button class="second-button">Brochure → </button>
+          </div>
+    </div>
+    </div>
+    
+</body>
+</html>
