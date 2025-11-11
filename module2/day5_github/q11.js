@@ -4,6 +4,7 @@ function multiply(a,b){
 console.log(multiply(6,7))
 
 console.log(multiply(7,6))
+console.log(multiply(7,6))
 
 function checkPrime(num){
     let count = 0
