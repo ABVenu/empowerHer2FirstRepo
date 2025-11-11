@@ -1,6 +1,9 @@
+function multiply(a,b){
+    return `The product of ${a} & ${b} is ${a*b}`
+}
+console.log(multiply(6,7))
 
-
-let num = 15;
+console.log(multiply(7,6))
 
 function checkPrime(num){
     let count = 0
@@ -16,7 +19,7 @@ function checkPrime(num){
         return false
     }
 }
-
+let num = 15;
 console.log(checkPrime(num))
 
 /// check even odd
