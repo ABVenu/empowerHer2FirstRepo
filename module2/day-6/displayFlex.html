@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+    #father{
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      border: 2px solid blue;
+    }
+    #father>div{
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      /* text-align: center; */
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      gap:0;
+    }
+    h3,h4{
+      margin: 0;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="father">
+       <div>
+        <h3>Child 1</h3>
+        <h4>Next Line 1</h4>
+      </div>
+      <div>
+        <h3>Child 2</h3>
+         <h4>Next Line 2</h4>
+      </div>
+       <div>
+        <h3>Child 3</h3>
+         <h4>Next Line 3</h4>
+      </div>
+       <div>
+        <h3>Child 4</h3>
+         <h4>Next Line 4</h4>
+      </div>
+       <div>
+        <h3>Child 5</h3>
+         <h4>Next Line 5</h4>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

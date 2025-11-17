@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Product Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #master_container {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 200px;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        #sidebar select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Product Grid */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Product Card */
+        .product_card {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #fff;
+        }
+
+        .product_card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h3,
+        h4,
+        h5 {
+            margin: 0;
+        }
+
+        /* Price Styling */
+        .details > h5 {
+            color: red;
+            text-decoration: line-through;
+            background-color: rgb(247, 199, 199);
+            width: fit-content;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        /* Buttons */
+        .product_card > div:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .product_card > div:nth-child(3) button {
+            border: none;
+            width: 45%;
+            height: 35px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .product_card > div:nth-child(3) button:first-child {
+            background-color: lightgray;
+        }
+
+        .product_card > div:nth-child(3) button:last-child {
+            background-color: lightblue;
+        }
+
+        /* -------------------------------------
+            RESPONSIVENESS
+        --------------------------------------*/
+
+        /* Tablet screens */
+        @media (max-width: 1024px) {
+            #master_container {
+                gap: 30px;
+            }
+        }
+
+        /* Large Mobiles */
+        @media (max-width: 768px) {
+            #master_container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #sidebar {
+                width: 100%;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+
+        /* Small Mobiles */
+        @media (max-width: 480px) {
+            #sidebar {
+                display: none;
+            }
+
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+
+            .product_card {
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="master_container">
+        
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <h3>Sidebar</h3>
+
+            <select>
+                <option>Filter By Price</option>
+                <option>Rs.5000 & below</option>
+                <option>Rs.10000 & below</option>
+                <option>Rs.15000 & below</option>
+                <option>Rs.20000 & below</option>
+            </select>
+
+            <select>
+                <option>Sort By Price</option>
+                <option>High To Low</option>
+                <option>Low To High</option>
+            </select>
+
+            <select>
+                <option>Sort By Name</option>
+                <option>A to Z</option>
+                <option>Z to A</option>
+            </select>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="container">
+
+            <!-- Repeat product below as many times as needed -->
+            <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Duplicate this card to create more products -->
+            <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed... -->
+              <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+             <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+             <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+             <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+             <div class="product_card">
+                <img src="https://m.media-amazon.com/images/I/616kkUbRg4L._AC_UL640_QL65_.jpg" alt="">
+                <div class="details">
+                    <h3>One Plus 15</h3>
+                    <h5>Original Price Rs.100000</h5>
+                    <h4>Discounted Price Rs.72000</h4>
+                </div>
+                <div>
+                    <button>Add To Cart</button>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+</body>
+</html>
